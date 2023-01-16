@@ -17,6 +17,7 @@ public class UAScan {
     public static JButton clearButton;
     public static JCheckBox enableAutoScan;
     public static JTextField filterText;
+    public static JTextField replaceHeader;
     public static JButton OKButton;
     public static JLabel filterLabel;
     public static JPanel filterPanel;
@@ -36,6 +37,7 @@ public class UAScan {
             @Override
             public void mouseClicked(MouseEvent e) {
                 Config.filter(filterText.getText());
+                Config.header = replaceHeader.getText();
                 filterText.setEnabled(false);
             }
         });

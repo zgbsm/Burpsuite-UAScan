@@ -78,7 +78,7 @@ public class HttpListener implements IHttpListener {
             }
         }
         String oldResult = HttpUtil.doRequest(url, method, headers);
-        headers.put("Cookie", "**********************");
+        headers.put(Config.header, "**********************");
         String newResult = HttpUtil.doRequest(url, method, headers);
         SimilarityStrategy strategy = new JaroWinklerStrategy();
         StringSimilarityService service = new StringSimilarityServiceImpl(strategy);

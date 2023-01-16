@@ -6,6 +6,7 @@ import java.util.List;
 
 public class Config {
     public static List<String> filters = new ArrayList<>();
+    public static String header = "";
 
     public  static void filter(String filter){
         filters = Arrays.asList(filter.split(";"));
